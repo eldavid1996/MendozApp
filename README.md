@@ -1,6 +1,6 @@
 # 🦄 Chat Frontend done in React and Backend with express and MongoDB using Typescript
-![register](https://github.com/user-attachments/assets/7cfef5a3-c040-42ae-80e9-f62626d907cb)
-![chat](https://github.com/user-attachments/assets/3a76c65b-dd31-4026-bd57-ef72512524e0)
+![mendozapp1](https://github.com/user-attachments/assets/94aa8aee-1a15-4c59-bf4e-536b695347f1)
+![mendozapp3](https://github.com/user-attachments/assets/697c1abc-4fab-47f0-a506-c8bd6212e317)
 
 + David Mendoza
   - https://github.com/eldavid1996
