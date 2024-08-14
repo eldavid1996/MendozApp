@@ -1,6 +1,6 @@
 import "./App.css";
 import { Suspense, lazy } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Spinner from "./components/Shared/Spinner";
 import Navbar from "./components/Navbar";
 import PageNotFound from "./components/Shared/PageNotFound";
