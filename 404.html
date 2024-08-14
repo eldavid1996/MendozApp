@@ -2,10 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=/" />
+    <script type="text/javascript">
+      var path = window.location.pathname;
+      var redirectTo = "/#" + path;
+      window.location.replace(redirectTo);
+    </script>
     <title>Page Not Found</title>
   </head>
-  <body>
-    <p>Page Not Found</p>
-  </body>
+  <body></body>
 </html>
