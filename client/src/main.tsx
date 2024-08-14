@@ -9,7 +9,7 @@ import App from "./App.tsx";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <NextUIProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/MendozApp/">
         <App />
       </BrowserRouter>
     </NextUIProvider>

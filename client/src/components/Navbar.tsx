@@ -1,26 +1,13 @@
-import { useEffect, useState, Suspense, lazy } from "react";
+import { useEffect } from "react";
 import { Button } from "@nextui-org/react";
-import {
-  Link,
-  useLocation,
-  useNavigate,
-  Route,
-  Routes,
-} from "react-router-dom";
-import Spinner from "./Shared/Spinner";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ContainerInsideNavBar, ContainerOutside } from "./Shared";
-import PageNotFound from "./Shared/PageNotFound";
 import { getToken } from "../utils";
 import { RegisterIcon, LoginIcon } from "./Icons";
 
-const Login = lazy(() => import("./Login"));
-const Chat = lazy(() => import("./Chat"));
-const Register = lazy(() => import("./Register"));
-
-export default function Navbar() {
+const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [showNotFound, setShowNotFound] = useState(false);
 
   useEffect(() => {
     const token = getToken();
@@ -28,12 +15,8 @@ export default function Navbar() {
 
     if (chatPage && !token) {
       navigate("/login");
-      setShowNotFound(false);
     } else if (!chatPage && token) {
       navigate("/chat");
-      setShowNotFound(false);
-    } else {
-      setShowNotFound(true);
     }
   }, [location.pathname, navigate]);
 
@@ -86,16 +69,8 @@ export default function Navbar() {
           </ContainerInsideNavBar>
         </ContainerOutside>
       )}
-      <Suspense fallback={!(location.pathname === "/chat") && <Spinner />}>
-        <Routes>
-          <Route path="/" element={<Login />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/register" element={<Register />}></Route>
-          <Route path="/chat" element={<Chat />}></Route>
-
-          {showNotFound && <Route path="/*" element={<PageNotFound />}></Route>}
-        </Routes>
-      </Suspense>
     </>
   );
-}
+};
+
+export default Navbar;
