@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Not Found</title>
     <script>
-      const path = window.location.pathname;
-      window.location.href = "/" + path;
+      document.addEventListener("DOMContentLoaded", function () {
+        window.location.href = "/";
+      });
     </script>
   </head>
   <body>
