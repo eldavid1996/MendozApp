@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: 
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.localhost.com:3000/sitemap.xml
